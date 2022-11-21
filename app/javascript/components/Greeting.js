@@ -1,20 +1,28 @@
 import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getMessage } from '../redux/greetingsReducer';
+import axios from 'axios';
 
 const Greeting = () => {
-  async function getMessage() {
-    await fetch('api/messages')
-      .then((response) => {
-        response.json();
-      })
-      .then((data) => {
-        console.log(data);
-      });
-  }
-  useEffect(() => {
-    getMessage()
-  }, [])
+  const dispatch = useDispatch();
+  const message = useSelector((state) => state.greeting);
 
-  return <div>Greeting</div>;
+  async function fetchMessage() {
+    await axios.get('api/messages').then((response) => {
+      dispatch(getMessage(response.data.greeting));
+    });
+  }
+
+  useEffect(() => {
+    fetchMessage();
+  }, []);
+
+  return (
+    <div>
+      <h1>{message}</h1>
+      <button onClick={() => fetchMessage()}>Generate greeting message</button>
+    </div>
+  );
 };
 
 export default Greeting;
