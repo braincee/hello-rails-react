@@ -1,24 +1,59 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Hello Rails React
 
-Things you may want to cover:
+> Rails application connecting React with Rails using webpack and babel
 
-* Ruby version
+## Made With
 
-* System dependencies
+- Ruby on Rails
+- React
 
-* Configuration
+## Getting Started
 
-* Database creation
+### Setup
 
-* Database initialization
+To setup the project locally: clone the repository using:
 
-* How to run the test suite
+```
+git clone https://github.com/braincee/hello-rails-react.git
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Install dependencies
+run:
+```
+bundle install
+```
 
-* Deployment instructions
+### Setup database
+run:
+```
+rails db:create
+rails db:migrate
+rails db:seed
+```
 
-* ...
+### Run the app
+run:
+```
+yarn build
+rails server
+```
+
+## Authors
+
+👤 **Stephen Annor**
+
+- GitHub: [@braincee](https://github.com/braincee)
+- Twitter: [@annor0543](https://twitter.com/annor0543)
+- LinkedIn: [Stephen Annor](https://www.linkedin.com/in/stephen-annor/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/braincee/hello-rails-react/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
