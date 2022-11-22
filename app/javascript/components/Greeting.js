@@ -20,7 +20,7 @@ const Greeting = () => {
   return (
     <div>
       <h1>{message}</h1>
-      <button onClick={() => fetchMessage()}>Generate greeting message</button>
+      <button onClick={() => fetchMessage()}>Greeting message</button>
     </div>
   );
 };
